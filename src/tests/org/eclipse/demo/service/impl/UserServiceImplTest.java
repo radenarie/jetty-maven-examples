@@ -13,7 +13,11 @@ public class UserServiceImplTest {
 
     @Test
     public void save() {
-       
+       User user = new User();
+       user.setUsername("New Admin");
+       user.setPassword("New Password");
+       User data = userDAO.save(user);
+       assertNotNull(data);
     }
 
     @Test
